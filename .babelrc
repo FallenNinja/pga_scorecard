@@ -8,7 +8,7 @@
           "browsers": "> 1%",
           "uglify": true
         },
-        "useBuiltIns": true
+        "useBuiltIns": true,
       }
     ],
     "react"
@@ -22,5 +22,7 @@
         "spec": true
       }
     ]
-  ]
+  ],
 }
+
+
