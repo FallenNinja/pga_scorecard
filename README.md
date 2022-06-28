@@ -2,7 +2,7 @@
 
 * Ruby version: ruby 2.7.3p183
 * Rails version: 5.1.7
-* Demo hosted on heroku: https://www.pga_scorecard.herokuapp.com
+* Demo hosted on heroku: https://www.pga-scorecard.herokuapp.com
 
 Intent:
 - User is able to select desired golf course, set player information such as name and handicap.
