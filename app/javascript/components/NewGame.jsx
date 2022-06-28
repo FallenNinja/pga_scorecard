@@ -216,11 +216,11 @@ const NewGame = ({ setScorecards }) => {
                 <h5 className="modal-title mb-3" id="exampleModalLabel">Step 3. Player Two Details</h5>
                 <div className="mb-3">
                     <input type="input" defaultValue={'Player Two'} className="form-control primary" id="gamePlayer2Name" aria-describedby="gamePlayer2NameHelp" name="Player2Name" />
-                    <div id="gamePlayer2NameHelp" className="form-text">Enter the name of Player One.</div>
+                    <div id="gamePlayer2NameHelp" className="form-text">Enter the name of Player Two.</div>
                 </div>
                 <div className="mb-3">
                     <input type="number" defaultValue={0} min={0} max={100} className="form-control primary" id="gamePlayer2Handicap" aria-describedby="gamePlayer2HandicapHelp" name="Player2Handicap" />
-                    <div id="gamePlayer2HandicapHelp" className="form-text">Enter the handicap of Player One.</div>
+                    <div id="gamePlayer2HandicapHelp" className="form-text">Enter the handicap of Player Two.</div>
                 </div>
             </Fragment>
         )
