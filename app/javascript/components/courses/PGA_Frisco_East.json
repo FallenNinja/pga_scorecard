@@ -1,0 +1,114 @@
+{
+    "name": "PGA Frisco - East Course (Black)",
+    "address": "1916 PGA Pkwy, Frisco, TX 75033",
+    "holes": [
+        {
+            "number": 1,
+            "yardage": 606,
+            "strokeIndex": 15,
+            "par": 5
+        },
+        {
+            "number": 2,
+            "yardage": 462,
+            "strokeIndex": 5,
+            "par": 4
+        },
+        {
+            "number": 3,
+            "yardage": 600,
+            "strokeIndex": 9,
+            "par": 5
+        },
+        {
+            "number": 4,
+            "yardage": 200,
+            "strokeIndex": 11,
+            "par": 3
+        },
+        {
+            "number": 5,
+            "yardage": 498,
+            "strokeIndex": 17,
+            "par": 4
+        },
+        {
+            "number": 6,
+            "yardage": 485,
+            "strokeIndex": 1,
+            "par": 4
+        },
+        {
+            "number": 7,
+            "yardage": 330,
+            "strokeIndex": 13,
+            "par": 4
+        },
+        {
+            "number": 8,
+            "yardage": 170,
+            "strokeIndex": 7,
+            "par": 3
+        },
+        {
+            "number": 9,
+            "yardage": 462,
+            "strokeIndex": 3,
+            "par": 4
+        },
+        {
+            "number": 10,
+            "yardage": 432,
+            "strokeIndex": 16,
+            "par": 4
+        },
+        {
+            "number": 11,
+            "yardage": 419,
+            "strokeIndex": 4,
+            "par": 4
+        },
+        {
+            "number": 12,
+            "yardage": 479,
+            "strokeIndex": 8,
+            "par": 4
+        },
+        {
+            "number": 13,
+            "yardage": 277,
+            "strokeIndex": 12,
+            "par": 3
+        },
+        {
+            "number": 14,
+            "yardage": 576,
+            "strokeIndex": 6,
+            "par": 5
+        },
+        {
+            "number": 15,
+            "yardage": 340,
+            "strokeIndex": 18,
+            "par": 4
+        },
+        {
+            "number": 16,
+            "yardage": 506,
+            "strokeIndex": 2,
+            "par": 4
+        },
+        {
+            "number": 17,
+            "yardage": 150,
+            "strokeIndex": 14,
+            "par": 3
+        },
+        {
+            "number": 18,
+            "yardage": 611,
+            "strokeIndex": 10,
+            "par": 5
+        }
+    ]
+}
