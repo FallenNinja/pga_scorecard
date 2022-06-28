@@ -62,6 +62,7 @@ const PreviousGames = ({ scorecards }) => {
                                                                     hole.status = 'T'
                                                                     if (hole.net > player2Net) {
                                                                         hole.status = 'L';
+                                                                        player2.pointTotal++
                                                                     }
                                                                     if (hole.net < player2Net) {
                                                                         hole.status = 'W';
@@ -100,7 +101,7 @@ const PreviousGames = ({ scorecards }) => {
                                                                         player1.pointTotal == player2.pointTotal ? (
                                                                             <span>TIE</span>
                                                                         ) : (
-                                                                            <span>{player1.pointTotal < player2.pointTotal ? 'LOSE' : 'WIN'}</span>
+                                                                            <span>{player1.pointTotal < player2.pointTotal ? 'LOSE' : 'WIN'}'</span>
                                                                         )
                                                                     }
                                                                 </th>
@@ -141,7 +142,6 @@ const PreviousGames = ({ scorecards }) => {
                                                                     if (hole.net < player1Net) {
                                                                         hole.status = 'W';
                                                                         pointColor = 'bg-warning';
-                                                                        player2.pointTotal++
                                                                     }
 
                                                                     player2.grossTotal += hole.gross
@@ -172,10 +172,10 @@ const PreviousGames = ({ scorecards }) => {
                                                                 {/* Determine and render win/loss status for player. */}
                                                                 <th className={`${player2.pointTotal < player1.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}>
                                                                     {
-                                                                        player1.pointTotal == player2.pointTotal ? (
+                                                                        player2.pointTotal == player1.pointTotal ? (
                                                                             <span>TIE</span>
                                                                         ) : (
-                                                                            <span>{player2.pointTotal < player1.pointTotal ? 'LOSE' : 'WIN'}</span>
+                                                                            <span>{player2.pointTotal < player1.pointTotal ? 'LOSE' : 'WIN'}'</span>
                                                                         )
                                                                     }
                                                                 </th>
