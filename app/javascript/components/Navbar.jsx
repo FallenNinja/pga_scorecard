@@ -19,7 +19,8 @@ const Navbar = () => {
                     <ul className="navbar-nav float-end">
                         <li className="nav-item">
                             <a className="nav-link active" target="__blank" href="https://www.pga.org">
-                                <img className={'float-end'} width={'75%'} height={'75%'} src='https://www.pga.org/static/pga-logo-984f34c12dcd610c1bfe53fc55525442.svg'></img>
+                                <img className={'float-end d-none d-sm-block'} width={'75%'} height={'75%'} src='https://www.pga.org/static/pga-logo-984f34c12dcd610c1bfe53fc55525442.svg'></img>
+                                <img className={'float-end d-block d-sm-none'} width={'60%'} height={'60%'} src='https://www.pga.org/static/pga-logo-984f34c12dcd610c1bfe53fc55525442.svg'></img>
                             </a>
                         </li>
                     </ul>
