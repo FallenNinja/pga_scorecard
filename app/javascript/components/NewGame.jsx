@@ -238,28 +238,28 @@ const NewGame = ({ setScorecards }) => {
                     <table className='table table-dark'>
                         <thead>
                             <tr>
-                                <th scope="col" className='border-bottom border-white'></th>
+                                <th scope="col" className='border-bottom border-white d-none d-sm-block'></th>
                                 <th scope="col" className='border-bottom border-white'></th>
                                 <th scope="col" className='border-start border-white'>{playerOne.name}</th>
                                 <th scope="col" className='border-bottom border-white'></th>
-                                <th scope="col" className='border-bottom border-white'></th>
-                                <th scope="col" className='border-bottom border-white'></th>
+                                <th scope="col" className='border-bottom border-white d-none d-sm-block'></th>
+                                <th scope="col" className='border-bottom border-white d-none d-sm-block'></th>
                                 <th scope="col" className='border-start border-white'>{playerTwo.name}</th>
                                 <th scope="col" className='border-bottom border-white'></th>
-                                <th scope="col" className='border-bottom border-white'></th>
-                                <th scope="col" className='border-bottom border-white'></th>
+                                <th scope="col" className='border-bottom border-white d-none d-sm-block'></th>
+                                <th scope="col" className='border-bottom border-white d-none d-sm-block'></th>
                             </tr>
                             <tr>
                                 <th scope="col">Hole #</th>
-                                <th scope="col">Par</th>
-                                <th scope="col" className='border-start border-white'>Allowance</th>
+                                <th scope="col" className='d-none d-sm-block'>Par</th>
+                                <th scope="col" className='d-none d-sm-block border-start border-white'>Allowance</th>
                                 <th scope="col">Gross</th>
                                 <th scope="col">Net</th>
-                                <th scope="col">Point</th>
-                                <th scope="col" className='border-start border-white'>Allowance</th>
+                                <th scope="col" className='d-none d-sm-block'>Point</th>
+                                <th scope="col" className='d-none d-sm-block border-start border-white'>Allowance</th>
                                 <th scope="col">Gross</th>
                                 <th scope="col">Net</th>
-                                <th scope="col">Point</th>
+                                <th scope="col" className='d-none d-sm-block'>Point</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -268,33 +268,33 @@ const NewGame = ({ setScorecards }) => {
                                 currentCourse.holes.map(hole => (
                                     <tr key={hole.number} className={hole.number == 18 ? 'border-bottom border-white' : ''}>
                                         <td className='border-bottom border-white'>{hole.number}</td>
-                                        <td className='border-end border-bottom border-white'>{hole.par}</td>
-                                        <td className='player1 allowance' name='player1'>{playerOne.holes[hole.number - 1].allowance}</td>
+                                        <td className='border-end border-bottom border-white d-none d-sm-block'>{hole.par}</td>
+                                        <td className='d-none d-sm-block player1 allowance' name='player1'>{playerOne.holes[hole.number - 1].allowance}</td>
                                         <td>
                                             <input type="number" name='player1' data-index={hole.number - 1} defaultValue={1} min={1} max={100} onChange={handleGrossChange} className="form-control primary" id={'grossPlayer1Hole' + hole.number} />
                                         </td>
                                         <td className='player1 net' name='player1'>{playerOne.holes[hole.number - 1].allowance + 1}</td>
-                                        <td className={'point '+
-                                            playerOne.holes[hole.number - 1].allowance + 1 == playerTwo.holes[hole.number - 1].allowance + 1 ? 'point bg-secondary' : (
-                                                playerOne.holes[hole.number - 1].allowance + 1 < playerTwo.holes[hole.number - 1].allowance + 1 ? 'point bg-warning' : 'point bg-secondary'
-                                            )
-                                        }>
+                                        <td className={`d-none d-sm-block point
+                                            ${playerOne.holes[hole.number - 1].allowance + 1 == playerTwo.holes[hole.number - 1].allowance + 1 ? ' bg-secondary' : (
+                                                playerOne.holes[hole.number - 1].allowance + 1 < playerTwo.holes[hole.number - 1].allowance + 1 ? ' bg-warning' : ' bg-secondary'
+                                            )}
+                                        `}>
                                             {
                                             playerOne.holes[hole.number - 1].allowance + 1 == playerTwo.holes[hole.number - 1].allowance + 1 ? 'T' : (
                                                 playerOne.holes[hole.number - 1].allowance + 1 < playerTwo.holes[hole.number - 1].allowance + 1 ? 'W' : 'L'
                                             )
                                             }
                                         </td>
-                                        <td className='player2 allowance' name='player2'>{playerTwo.holes[hole.number - 1].allowance}</td>
+                                        <td className='d-none d-sm-block player2 allowance' name='player2'>{playerTwo.holes[hole.number - 1].allowance}</td>
                                         <td>
                                             <input type="number" name='player2' data-index={hole.number - 1} defaultValue={1} min={1} max={100} onChange={handleGrossChange} className="form-control primary" id={'grossPlayer2Hole' + hole.number} />
                                         </td>
                                         <td className='player2 net' name='player2'>{playerTwo.holes[hole.number - 1].allowance + 1}</td>
-                                        <td className={
-                                            playerTwo.holes[hole.number - 1].allowance + 1 == playerOne.holes[hole.number - 1].allowance + 1 ? 'point bg-secondary' : (
-                                                playerTwo.holes[hole.number - 1].allowance + 1 < playerOne.holes[hole.number - 1].allowance + 1 ? 'point bg-warning' : 'point bg-secondary'
-                                            )
-                                        }>
+                                        <td className={`d-none d-sm-block point
+                                            ${playerTwo.holes[hole.number - 1].allowance + 1 == playerOne.holes[hole.number - 1].allowance + 1 ? ' bg-secondary' : (
+                                                playerTwo.holes[hole.number - 1].allowance + 1 < playerOne.holes[hole.number - 1].allowance + 1 ? ' bg-warning' : ' bg-secondary'
+                                            )}
+                                        `}>
                                             {
                                             playerTwo.holes[hole.number - 1].allowance + 1 == playerOne.holes[hole.number - 1].allowance + 1 ? 'T' : (
                                                 playerTwo.holes[hole.number - 1].allowance + 1 < playerOne.holes[hole.number - 1].allowance + 1 ? 'W' : 'L'
@@ -306,8 +306,8 @@ const NewGame = ({ setScorecards }) => {
                             }
                             <tr>
                                 {/* Displays total values. */}
-                                <th>Total</th>
-                                <td>{
+                                <th className='d-none d-sm-block'>Total</th>
+                                <td className='d-none d-sm-block'>{
                                     currentCourse.holes.reduce(function (total, currentValue) {
                                         return total + currentValue.par;
                                     }, 0)

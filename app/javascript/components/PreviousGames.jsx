@@ -44,8 +44,8 @@ const PreviousGames = ({ scorecards }) => {
                                                         <thead>
                                                             <tr>
                                                                 <th scope="col">Hole #</th>
-                                                                <th scope="col">Gross</th>
-                                                                <th scope="col">Allowance</th>
+                                                                <th scope="col" className='d-none d-sm-block'>Gross</th>
+                                                                <th scope="col" className='d-none d-sm-block'>Allowance</th>
                                                                 <th scope="col">Net</th>
                                                                 <th scope="col">Point</th>
                                                             </tr>
@@ -78,8 +78,8 @@ const PreviousGames = ({ scorecards }) => {
                                                                     return (
                                                                         <tr key={index} className={index == 17 ? 'border-bottom border-white' : ''}>
                                                                             <th scope="row">{hole.number}</th>
-                                                                            <td>{hole.gross}</td>
-                                                                            <td>{hole.allowance}</td>
+                                                                            <td className='d-none d-sm-block'>{hole.gross}</td>
+                                                                            <td className='d-none d-sm-block'>{hole.allowance}</td>
                                                                             <td>{hole.net}</td>
                                                                             <td className={`${pointColor}`}><span>{hole.status}</span></td>
                                                                         </tr>
@@ -89,8 +89,8 @@ const PreviousGames = ({ scorecards }) => {
                                                             {/* Display total values at the bottom of the table element. */}
                                                             <tr>
                                                                 <th scope="row">Total</th>
-                                                                <td>{player1.grossTotal}</td>
-                                                                <td>{player1.allowanceTotal}</td>
+                                                                <td className='d-none d-sm-block'>{player1.grossTotal}</td>
+                                                                <td className='d-none d-sm-block'>{player1.allowanceTotal}</td>
                                                                 <td>{player1.netTotal}</td>
                                                                 <th><span>{player1.pointTotal}</span></th>
                                                             </tr>
@@ -107,8 +107,8 @@ const PreviousGames = ({ scorecards }) => {
                                                                 </th>
                                                                 <th className={`${player1.pointTotal < player2.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
                                                                 <th className={`${player1.pointTotal < player2.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
-                                                                <th className={`${player1.pointTotal < player2.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
-                                                                <th className={`${player1.pointTotal < player2.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
+                                                                <th className={`d-none d-sm-block ${player1.pointTotal < player2.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
+                                                                <th className={`d-none d-sm-block ${player1.pointTotal < player2.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -119,9 +119,9 @@ const PreviousGames = ({ scorecards }) => {
                                                     <table className="table table-dark">
                                                         <thead>
                                                             <tr>
-                                                                <th scope="col">Hole #</th>
-                                                                <th scope="col">Gross</th>
-                                                                <th scope="col">Allowance</th>
+                                                                <th scope="col" className='d-none d-sm-block'>Hole #</th>
+                                                                <th scope="col" className='d-none d-sm-block'>Gross</th>
+                                                                <th scope="col" className='d-none d-sm-block'>Allowance</th>
                                                                 <th scope="col">Net</th>
                                                                 <th scope="col">Point</th>
                                                             </tr>
@@ -151,9 +151,9 @@ const PreviousGames = ({ scorecards }) => {
                                                                     // Display hole values inside table element.
                                                                     return (
                                                                         <tr key={index} className={index == 17 ? 'border-bottom border-white' : ''}>
-                                                                            <th scope="row">{hole.number}</th>
-                                                                            <td>{hole.gross}</td>
-                                                                            <td>{hole.allowance}</td>
+                                                                            <th scope="row" className='d-none d-sm-block'>{hole.number}</th>
+                                                                            <td className='d-none d-sm-block'>{hole.gross}</td>
+                                                                            <td className='d-none d-sm-block'>{hole.allowance}</td>
                                                                             <td>{hole.net}</td>
                                                                             <td className={`${pointColor}`}><span>{hole.status}</span></td>
                                                                         </tr>
@@ -162,9 +162,9 @@ const PreviousGames = ({ scorecards }) => {
                                                             }
                                                             {/* Display total values at the bottom of the table element. */}
                                                             <tr>
-                                                                <th scope="row">Total</th>
-                                                                <td>{player2.grossTotal}</td>
-                                                                <td>{player2.allowanceTotal}</td>
+                                                                <th scope="row" className='d-none d-sm-block'>Total</th>
+                                                                <td className='d-none d-sm-block'>{player2.grossTotal}</td>
+                                                                <td className='d-none d-sm-block'>{player2.allowanceTotal}</td>
                                                                 <td>{player2.netTotal}</td>
                                                                 <th><span>{player2.pointTotal}</span></th>
                                                             </tr>
@@ -180,9 +180,9 @@ const PreviousGames = ({ scorecards }) => {
                                                                     }
                                                                 </th>
                                                                 <th className={`${player2.pointTotal < player1.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
-                                                                <th className={`${player2.pointTotal < player1.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
-                                                                <th className={`${player2.pointTotal < player1.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
-                                                                <th className={`${player2.pointTotal < player1.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
+                                                                <th className={`d-none d-sm-block ${player2.pointTotal < player1.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
+                                                                <th className={`d-none d-sm-block ${player2.pointTotal < player1.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
+                                                                <th className={`d-none d-sm-block ${player2.pointTotal < player1.pointTotal | player1.pointTotal == player2.pointTotal ? 'bg-secondary' : 'bg-warning'}`}></th>
                                                             </tr>
                                                         </tbody>
                                                     </table>
