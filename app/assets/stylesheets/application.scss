@@ -13,10 +13,12 @@
  *= require_tree .
  *= require_self
  *= include bootstrap
+ *= include fontAwesome
  */
 
- @import "bootstrap/scss/bootstrap";
- @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+// @import "bootstrap/scss/bootstrap";
+// @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+// //  @import url('plugins/font-awesome/css/font-awesome.css');
 
  .nav-link {
    padding-top: 0%;
