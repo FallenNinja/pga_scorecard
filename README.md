@@ -1,6 +1,4 @@
-# README
-
-This project is made to track the games played at a golf course.
+# This project is made to track the games played at a PGA golf course.
 
 * Ruby version: ruby 2.7.3p183
 * Rails version: 5.1.7
