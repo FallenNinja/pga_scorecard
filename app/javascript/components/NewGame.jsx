@@ -401,17 +401,17 @@ const NewGame = ({ setScorecards }) => {
                                 {currentPage == 2 ? <CreatePage2 /> : null}
                                 {currentPage == 3 ? <CreatePage3 /> : null}
                                 {currentPage == 4 ? <CreatePage4 /> : null}
-                            </div>
-                            <div className='d-block d-sm-none'>
-                                <button type="button" className="btn btn-sm bg-warning" data-bs-dismiss="modal">Close</button>
-                                {currentPage !== 4 && currentCourse !== null ? (
-                                    <button type="button" className="btn btn-sm secondary" onClick={nextPage}>Continue</button>
-                                ) : (
-                                    currentPage !== 4 ? <button type="button" className="btn btn-sm secondary disabled" disabled>Continue</button> : null)
-                                }
-                                {currentPage == 4 ? (
-                                    <button type="submit" className="btn btn-sm secondary">Submit</button>
-                                ) : null}
+                                <div className='float-end d-block d-sm-none'>
+                                    <button type="button" className="btn btn-sm bg-warning me-3" data-bs-dismiss="modal">Close</button>
+                                    {currentPage !== 4 && currentCourse !== null ? (
+                                        <button type="button" className="btn btn-sm secondary" onClick={nextPage}>Continue</button>
+                                    ) : (
+                                        currentPage !== 4 ? <button type="button" className="btn btn-sm secondary disabled" disabled>Continue</button> : null)
+                                    }
+                                    {currentPage == 4 ? (
+                                        <button type="submit" className="btn btn-sm secondary">Submit</button>
+                                    ) : null}
+                                </div>
                             </div>
                             <div className="modal-footer d-none d-sm-block">
                                 <button type="button" className="btn btn-sm bg-warning" data-bs-dismiss="modal">Close</button>
